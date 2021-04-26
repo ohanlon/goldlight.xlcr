@@ -6,10 +6,7 @@ namespace Goldlight.Xlcr.Core
     {
         public object Execute(string endpoint)
         {
-            if (string.IsNullOrWhiteSpace(endpoint))
-            {
-                throw new ArgumentException();
-            }
+            Endpoint uriEndoint = new Endpoint(endpoint);
             return new NotImplementedException();
         }
     }

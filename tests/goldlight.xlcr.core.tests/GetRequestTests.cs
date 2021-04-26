@@ -1,11 +1,13 @@
+using System;
 using Xunit;
 
 namespace Goldlight.Xlcr.Core.Tests
 {
     public class GetRequestTests
     {
+
         [Fact]
-        public void Test1()
+        public void GivenCallToExecuteGetRequest_WhenNoEndpointIsSet_ThenNonNullResponseIsReturned()
         {
             GetRequest getRequest = new GetRequest();
             Assert.NotNull(getRequest.Execute("http://www.google.com"));
@@ -15,7 +17,7 @@ namespace Goldlight.Xlcr.Core.Tests
         public void GivenCallToExecuteGetRequest_WhenNoEndpointIsSet_ThenArgumentExceptionIsThrown()
         {
             GetRequest getRequest = new GetRequest();
-            Assert.NotNull(getRequest.Execute("http://www.google.com"));
+            Assert.Throws<ArgumentException>(() => getRequest.Execute(""));
         }
     }
 

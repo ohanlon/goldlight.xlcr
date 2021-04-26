@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
 
 namespace Goldlight.Xlcr.Core
 {
@@ -8,18 +6,16 @@ namespace Goldlight.Xlcr.Core
     {
         public Endpoint(string endpoint)
         {
-            if (string.IsNullOrWhiteSpace(endpoint) || !IsHttpFormatEndpoint(endpoint))
+            if (!IsHttpFormatEndpoint(endpoint))
             {
                 throw new ArgumentException(null, nameof(endpoint));
             }
             Address = endpoint;
         }
-
         public string Address { get; }
 
-        private bool IsHttpFormatEndpoint(string endpoint)
-        {
-            return new Regex(@"^\s*(http|https)://.*$", RegexOptions.IgnoreCase).IsMatch(endpoint);
-        }
+        private bool IsHttpFormatEndpoint(string endpoint) => Uri.TryCreate(endpoint, UriKind.Absolute, out Uri uri)
+                && uri.IsWellFormedOriginalString()
+                && (uri.Scheme == Uri.UriSchemeHttp || uri.Scheme == Uri.UriSchemeHttps);
     }
 }

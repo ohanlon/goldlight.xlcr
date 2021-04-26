@@ -29,6 +29,7 @@ namespace Goldlight.Xlcr.Core.Tests
         {
             Assert.Throws<ArgumentException>(() => new Endpoint("httpswww.google.com"));
         }
+        
         [Fact]
         public void GivenInstantiationOfEndpoint_WhenTheEndpointHasLeadingSpaces_ThenTheEndpointIsAccepted()
         {
