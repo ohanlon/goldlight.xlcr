@@ -4,7 +4,7 @@ namespace Goldlight.Xlcr.Core
 {
   public class Endpoint
   {
-    public Endpoint(string endpoint, QueryString queryString)
+    public Endpoint(string endpoint, QueryString queryString = null)
     {
       if (queryString != null)
       {

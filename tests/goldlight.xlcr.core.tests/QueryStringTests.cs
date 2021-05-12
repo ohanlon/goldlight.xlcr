@@ -33,5 +33,21 @@ namespace Goldlight.Xlcr.Core.Tests
       QueryString queryString = new QueryString();
       Assert.Equal("https://pete.dummyapi.com/get/", queryString.Transform("https://pete.dummyapi.com/get/"));
     }
+
+    [Fact]
+    public void GivenCallToTransformWhenUrlPassedIn_WithMatchingKeyValuePairs_ThenOriginalUrlIsReturned()
+    {
+      QueryString queryString = new QueryString();
+      queryString.Add("id", "1");
+      Assert.Equal("https://pete.dummyapi.com/get/1", queryString.Transform("https://pete.dummyapi.com/get/{id}"));
+    }
+
+    [Fact]
+    public void GivenCallToTransformWhenUrlPassedIn_WithOrdinallyDifferentKeyValuePairs_ThenOriginalUrlIsReturned()
+    {
+      QueryString queryString = new QueryString();
+      queryString.Add("ID", "1");
+      Assert.Equal("https://pete.dummyapi.com/get/1", queryString.Transform("https://pete.dummyapi.com/get/{id}"));
+    }
   }
 }

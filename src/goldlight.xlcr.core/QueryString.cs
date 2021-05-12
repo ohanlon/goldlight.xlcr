@@ -16,6 +16,10 @@ namespace Goldlight.Xlcr.Core
 
     public string Transform(string url)
     {
+      foreach (KeyValuePair<string, string> parameter in _queryStringParameters)
+      {
+        url = url.Replace($"{{{parameter.Key}}}", parameter.Value, StringComparison.OrdinalIgnoreCase);
+      }
       return url;
     }
   }

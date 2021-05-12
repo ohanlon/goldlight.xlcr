@@ -13,6 +13,15 @@ namespace Goldlight.Xlcr.Core.Tests
     }
 
     [Fact]
+    public void GivenKeyValuePairQueryString_WhenTransformCalled_ThenEndpointIsChanged()
+    {
+      QueryString queryString = new QueryString();
+      queryString.Add("id", "1");
+      Endpoint endpoint = new Endpoint("http://www.google.com/{id}", queryString);
+      Assert.Equal("http://www.google.com/1", endpoint.Address);
+    }
+
+    [Fact]
     public void GivenInstantiationOfAnEndpoint_WhenTheEndpointIsSet_ThenEndpointIsCreated()
     {
       Endpoint endpoint = new Endpoint("http://www.google.com", null);
