@@ -1,13 +1,13 @@
 using System;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace Goldlight.Xlcr.Core
 {
-  public class GetRequest
+  public class GetRequest : Request
   {
-    public object Execute(string endpoint)
-    {
-      Endpoint uriEndoint = new Endpoint(endpoint, null);
-      return new NotImplementedException();
-    }
+    public GetRequest(HttpClient client) : base(client) { }
+
+    protected async override Task<HttpResponseMessage> Execute(Endpoint endpoint) => await Client.GetAsync(endpoint.Address);
   }
 }
