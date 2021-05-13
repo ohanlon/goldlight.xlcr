@@ -5,8 +5,4 @@
     <RootNamespace>Goldlight.Xlcr.Core</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Tests\" />
-  </ItemGroup>
-
 </Project>
