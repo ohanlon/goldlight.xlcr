@@ -1,0 +1,17 @@
+﻿@page "/"
+
+@inject Goldlight.Xlcr.Core.GetRequest Get
+
+<input type="text" placeholder="Enter address to search for" @bind="searchAddress" @bind:event="oninput" />
+<button @onclick="ExecuteGet" disabled="@string.IsNullOrWhiteSpace(searchAddress)">Go</button>
+<div>@searchResult</div>
+
+@code {
+  private string searchAddress;
+  private string searchResult;
+  private async Task ExecuteGet()
+  {
+      HttpResponseMessage result = await Get.Execute(searchAddress);
+      searchResult = await result.Content.ReadAsStringAsync();
+  }
+}

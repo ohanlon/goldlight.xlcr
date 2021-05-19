@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{04E8FB10-3D8A-4BE8-A503-633A984A63FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "goldlight.xlcr.core", "src\goldlight.xlcr.core\goldlight.xlcr.core.csproj", "{5B4D2FA4-5D34-4AF0-9148-1AC973373721}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "goldlight.xlcr.core", "src\goldlight.xlcr.core\goldlight.xlcr.core.csproj", "{5B4D2FA4-5D34-4AF0-9148-1AC973373721}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4103CDE5-67E8-4680-AB5E-72658E3685FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "goldlight.xlcr.core.tests", "tests\goldlight.xlcr.core.tests\goldlight.xlcr.core.tests.csproj", "{13347DD8-92E1-4C24-B1C5-DB1EDEF47FA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "goldlight.xlcr.core.tests", "tests\goldlight.xlcr.core.tests\goldlight.xlcr.core.tests.csproj", "{13347DD8-92E1-4C24-B1C5-DB1EDEF47FA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goldlight.Xlcr.Ui", "src\Goldlight.Xlcr.Ui\Goldlight.Xlcr.Ui.csproj", "{16B9D468-5547-4DD3-88A5-B54CBF8161C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{5B4D2FA4-5D34-4AF0-9148-1AC973373721}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -48,9 +47,28 @@ Global
 		{13347DD8-92E1-4C24-B1C5-DB1EDEF47FA8}.Release|x64.Build.0 = Release|Any CPU
 		{13347DD8-92E1-4C24-B1C5-DB1EDEF47FA8}.Release|x86.ActiveCfg = Release|Any CPU
 		{13347DD8-92E1-4C24-B1C5-DB1EDEF47FA8}.Release|x86.Build.0 = Release|Any CPU
+		{16B9D468-5547-4DD3-88A5-B54CBF8161C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16B9D468-5547-4DD3-88A5-B54CBF8161C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16B9D468-5547-4DD3-88A5-B54CBF8161C8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{16B9D468-5547-4DD3-88A5-B54CBF8161C8}.Debug|x64.Build.0 = Debug|Any CPU
+		{16B9D468-5547-4DD3-88A5-B54CBF8161C8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{16B9D468-5547-4DD3-88A5-B54CBF8161C8}.Debug|x86.Build.0 = Debug|Any CPU
+		{16B9D468-5547-4DD3-88A5-B54CBF8161C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16B9D468-5547-4DD3-88A5-B54CBF8161C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16B9D468-5547-4DD3-88A5-B54CBF8161C8}.Release|x64.ActiveCfg = Release|Any CPU
+		{16B9D468-5547-4DD3-88A5-B54CBF8161C8}.Release|x64.Build.0 = Release|Any CPU
+		{16B9D468-5547-4DD3-88A5-B54CBF8161C8}.Release|x86.ActiveCfg = Release|Any CPU
+		{16B9D468-5547-4DD3-88A5-B54CBF8161C8}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5B4D2FA4-5D34-4AF0-9148-1AC973373721} = {04E8FB10-3D8A-4BE8-A503-633A984A63FE}
 		{13347DD8-92E1-4C24-B1C5-DB1EDEF47FA8} = {4103CDE5-67E8-4680-AB5E-72658E3685FB}
+		{16B9D468-5547-4DD3-88A5-B54CBF8161C8} = {04E8FB10-3D8A-4BE8-A503-633A984A63FE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BEF8FEB7-3288-4589-8171-90D43341B31D}
 	EndGlobalSection
 EndGlobal
