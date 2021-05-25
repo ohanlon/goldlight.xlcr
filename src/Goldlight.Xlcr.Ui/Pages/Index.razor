@@ -2,18 +2,29 @@
 
 @inject Goldlight.Xlcr.Core.GetRequest Get
 
-<div class="d-flex">
-  <div class="flex-grow-1">
-    <input class="search" type="text" placeholder="Enter address to search for" @bind="searchAddress" @bind:event="oninput" />
-  </div>
-  <div>
-    <button @onclick="ExecuteGet" disabled="@string.IsNullOrWhiteSpace(searchAddress)">Go</button>
-  </div>
-</div>
-<div>@searchResult</div>
+<MudContainer>
+  <MudGrid>
+    <MudItem lg="11" md="11" sm="11" xs="11">
+      <MudTextField T="string" Text="@searchAddress" Placeholder="Enter address to search for" FullWidth="true"
+                    Variant="Variant.Outlined" Immediate="true" Margin="Margin.Dense" AutoFocus="true" />
+    </MudItem>
+    <MudItem lg="1" md="1" sm="1" xs="1">
+      <MudButton Variant="Variant.Filled" Color="Color.Primary"
+                 @onclick="ExecuteGet" Disabled="@string.IsNullOrWhiteSpace(searchAddress)">Go</MudButton>
+
+    </MudItem>
+    <MudItem lg="12" md="12" sm="12" xs="12">
+      <MudExpansionPanels>
+        <MudExpansionPanel Text="Search result">
+          <MudTextField T="string" Text="@searchResult" Lines="10" ReadOnly="true" Variant="Variant.Text" />
+        </MudExpansionPanel>
+      </MudExpansionPanels>
+    </MudItem>
+  </MudGrid>
+</MudContainer>
 
 @code {
-  private string searchAddress;
+  private string searchAddress = "https://www.google.com";
   private string searchResult;
   private async Task ExecuteGet()
   {
