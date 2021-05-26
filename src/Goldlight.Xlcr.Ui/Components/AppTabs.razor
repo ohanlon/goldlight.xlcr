@@ -1,0 +1,17 @@
+﻿<MudTabs ActivePanelIndex="@activeTab">
+  <MudTabPanel Text="New operation" @onclick="AddTab" Icon="@Icons.Material.Filled.Add"></MudTabPanel>
+  <MudTabPanel Text="GET">
+    <RequestLayout />
+  </MudTabPanel>
+  <MudTabPanel Text="GET">
+    <RequestLayout />
+  </MudTabPanel>
+</MudTabs>
+
+@code {
+  private int activeTab = 0;
+  private void AddTab()
+  {
+    activeTab = 1;
+  }
+}
