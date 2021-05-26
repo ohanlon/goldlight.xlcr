@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4103CDE5
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "goldlight.xlcr.core.tests", "tests\goldlight.xlcr.core.tests\goldlight.xlcr.core.tests.csproj", "{13347DD8-92E1-4C24-B1C5-DB1EDEF47FA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Goldlight.Xlcr.Ui", "src\Goldlight.Xlcr.Ui\Goldlight.Xlcr.Ui.csproj", "{16B9D468-5547-4DD3-88A5-B54CBF8161C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goldlight.Xlcr.Ui", "src\Goldlight.Xlcr.Ui\Goldlight.Xlcr.Ui.csproj", "{16B9D468-5547-4DD3-88A5-B54CBF8161C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
