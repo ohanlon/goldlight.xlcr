@@ -1,23 +1,4 @@
 ﻿@page "/"
-
-@inject Goldlight.Xlcr.Core.GetRequest Get
-
-<div class="d-flex">
-  <div class="flex-grow-1">
-    <input class="search" type="text" placeholder="Enter address to search for" @bind="searchAddress" @bind:event="oninput" />
-  </div>
-  <div>
-    <button @onclick="ExecuteGet" disabled="@string.IsNullOrWhiteSpace(searchAddress)">Go</button>
-  </div>
-</div>
-<div>@searchResult</div>
-
-@code {
-  private string searchAddress;
-  private string searchResult;
-  private async Task ExecuteGet()
-  {
-    HttpResponseMessage result = await Get.Execute(searchAddress);
-    searchResult = await result.Content.ReadAsStringAsync();
-  }
-}
+<MudContainer>
+  <AppTabs />
+</MudContainer>
